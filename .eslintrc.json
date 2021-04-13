@@ -1,0 +1,67 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": ["./node_modules", "commitlint.config.js"],
+  "plugins": [
+    "@typescript-eslint",
+    "sonarjs",
+    "mocha",
+    "chai-expect",
+    "chai-friendly",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:sonarjs/recommended",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:mocha/recommended",
+    "plugin:chai-expect/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "mocha": true
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/require-default-props":"off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/no-default-export": "off",
+    "prettier/prettier": "error",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "off",
+      { "allowExpressions": true, "allowTypedFunctionExpressions": true }
+    ],
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "@typescript-eslint/no-parameter-properties": "off",
+    "class-methods-use-this": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-console": "warn",
+    "no-underscore-dangle": "off",
+    "no-void": ["error", { "allowAsStatement": true }],
+    "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }],
+    "sonarjs/no-duplicate-string": "warn",
+    "mocha/no-mocha-arrows": "off",
+    "@typescript-eslint/no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2
+  },
+  "overrides": [
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    }
+  ]
+}
