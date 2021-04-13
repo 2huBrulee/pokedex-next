@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
+    "strictNullChecks": true,
     "allowJs": true,
     "alwaysStrict": true,
     "esModuleInterop": true,
@@ -8,7 +9,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["dom", "es2017"],
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
